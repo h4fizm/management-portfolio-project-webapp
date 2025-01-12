@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swiper Test</title>
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+  <style>
+    /* Basic styling for testing */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+    .portfolio-container {
+      width: 90%;
+      max-width: 600px;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .portfolio-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .portfolio-img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+    .swiper-pagination {
+      margin-top: 20px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #333;
+    }
+    .swiper-button-next i,
+    .swiper-button-prev i {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Swiper Section -->
+  <section class="portfolio-container swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="portfolio-content swiper-slide">
+        <img src="https://via.placeholder.com/300" alt="Project 1" class="portfolio-img" />
+        <h3 class="portfolio-title">Business Websites</h3>
+        <p class="portfolio-description">
+          Dynamic business sites that reflect your brand and engage customers effectively.
+        </p>
+      </div>
+      <!-- Slide 2 -->
+      <div class="portfolio-content swiper-slide">
+        <img src="https://via.placeholder.com/300" alt="Project 2" class="portfolio-img" />
+        <h3 class="portfolio-title">Portfolio Websites</h3>
+        <p class="portfolio-description">
+          Impressive portfolio sites that showcase your talents with a flawless user experience.
+        </p>
+      </div>
+      <!-- Slide 3 -->
+      <div class="portfolio-content swiper-slide">
+        <img src="https://via.placeholder.com/300" alt="Project 3" class="portfolio-img" />
+        <h3 class="portfolio-title">Landing Pages</h3>
+        <p class="portfolio-description">
+          Compelling landing pages that drive conversions and engage your audience.
+        </p>
+      </div>
+    </div>
+    <!-- Navigation Buttons -->
+    <div class="swiper-button-next">
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <div class="swiper-button-prev">
+      <i class="fa-solid fa-angle-left"></i>
+    </div>
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    // Initialize Swiper
+    let swiperPortfolio = new Swiper(".swiper-container", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
