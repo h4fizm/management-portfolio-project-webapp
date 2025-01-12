@@ -946,92 +946,98 @@ img {
   }
 
   .swiper-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    overflow: hidden; /* Menyembunyikan slide sebelum dan sesudah */
+    position: relative; /* Memastikan tombol navigasi relatif terhadap container */
+    padding: 20px; /* Tambahkan padding di dalam container untuk memberi ruang */
+    gap: 20px; /* Jarak antar elemen di dalam swiper container */
   }
 
   .swiper-slide {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 100%;
-    flex-shrink: 0;
+    width: 100%; /* Pastikan slide mengambil seluruh lebar kontainer */
+    max-width: 320px; /* Tetapkan batas maksimum lebar slide */
+    height: auto; /* Biarkan tinggi menyesuaikan secara otomatis */
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-    align-items: center;
+    justify-content: center; /* Tengah isi slide secara horizontal */
+    align-items: center; /* Tengah isi slide secara vertikal */
+    box-sizing: border-box; /* Sertakan padding dan border dalam ukuran */
   }
 
   .swiper-slide-active {
-    opacity: 1;
+    display: flex; /* Tampilkan hanya slide aktif */
   }
 
   /* Tombol Swiper */
   .swiper-button-prev,
   .swiper-button-next {
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
+    position: absolute;
+    top: -70px; /* Posisikan tombol di atas container */
+    transform: translateY(
+      -50%
+    ); /* Pastikan tombol benar-benar berada di tengah */
+    z-index: 10; /* Pastikan tombol berada di atas konten lainnya */
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.3
+    ); /* Warna background dengan transparansi */
+    color: #fff; /* Warna tombol */
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 50%; /* Bentuk bulat */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    bottom: 100%;
-    transform: translateY(-50%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Tambahkan efek bayangan */
   }
 
   /* Tombol sebelumnya */
   .swiper-button-prev {
-    left: -5px;
+    left: -5px; /* Atur jarak dari tepi kiri */
   }
 
   /* Tombol berikutnya */
   .swiper-button-next {
-    right: -5px;
+    right: -5px; /* Atur jarak dari tepi kanan */
+  }
+
+  /* Komponen di dalam container Swiper */
+  .swiper-slide {
+    display: flex; /* Menggunakan flexbox untuk elemen dalam slide */
+    flex-direction: column; /* Susun elemen secara vertikal */
+    gap: 20px; /* Tambahkan jarak antar elemen dalam slide */
+    padding: 10px; /* Beri ruang di dalam setiap slide */
+    align-items: center; /* Pastikan elemen sejajar di tengah */
   }
 
   /* Gambar */
   .portfolio-img {
-    max-width: 100%;
-    maxheighth:4000%;
-    border-radius: 10px;
+    max-width: 100%; /* Pastikan gambar tidak melebihi lebar container */
+    border-radius: 10px; /* Tambahkan radius untuk tampilan lembut */
   }
 
   /* Judul */
   .portfolio-title {
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* Ukuran font */
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Tambahkan margin bawah */
   }
 
   /* Deskripsi */
   .portfolio-description {
     font-size: 1rem;
-    margin: 10px 0;
-    text-align: center;
+    margin: 10px 0; /* Beri margin vertikal */
+    text-align: center; /* Rata tengah untuk teks */
   }
 
   /* Tombol di dalam slide */
   .portfolio-button {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .swiper-wrapper {
-    display: flex;
-    transition: transform 0.3s ease;
-    max-width: 305px;
-    max-height: 400px;
+    margin-top: 30px; /* Jarak antara tombol dan elemen sebelumnya */
+    display: flex; /* Gunakan flexbox untuk mengatur posisi */
+    justify-content: center; /* Posisikan tombol di tengah */
+    align-items: center; /* Sejajarkan tombol secara vertikal di tengah */
+    width: 100%; /* Pastikan tombol mengisi seluruh lebar container */
   }
 }
 
@@ -1274,34 +1280,23 @@ img {
   }
 
   .swiper-container {
-    overflow: hidden;
+    overflow: hidden; /* Menyembunyikan slide sebelum dan sesudah */
   }
 
   .swiper-slide {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    opacity: 0; /* Sembunyikan semua slide secara default */
+    transition: opacity 0.3s ease; /* Menambahkan transisi untuk efek perubahan opacity */
   }
 
   .swiper-slide-active {
-    opacity: 1;
+    opacity: 1; /* Tampilkan slide yang aktif */
   }
 
   /* Tambahkan aturan ini untuk menampilkan slide jika hanya ada satu */
   .swiper-container:only-child .swiper-slide {
-    opacity: 1;
-  }
-  .swiper-wrapper {
-    display: flex;
-    transition: transform 0.3s ease;
-    max-width: 850px;
-    max-height: 600px;
-  }
-  .services-box-services {
-    display: grid; /* Atau flex, tergantung layout Anda */
-    gap: 1rem; /* Menambahkan gap di dalam elemen services-box-services */
+    opacity: 1; /* Tampilkan slide jika hanya ada satu */
   }
 }
-
 
 /*******************************/
 /********* Footer CSS **********/
@@ -1356,22 +1351,22 @@ img {
 }
 
 .footer-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
+  display: flex; /* Mengaktifkan flexbox */
+  justify-content: center; /* Menengahkan ikon secara horizontal */
+  align-items: center; /* Menyesuaikan vertikal */
+  gap: 15px; /* Jarak antar ikon */
+  margin-top: 20px; /* Memberi jarak dari elemen di atasnya */
 }
 
 .footer-social a {
   display: inline-block;
-  color: #ffffff;
-  font-size: 20px;
+  color: #ffffff; /* Warna ikon */
+  font-size: 20px; /* Ukuran ikon */
   transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
-  color: #414141;
+  color: #414141; /* Warna saat hover */
 }
 
 .footer .copyright {

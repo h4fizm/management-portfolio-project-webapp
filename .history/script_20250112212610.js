@@ -182,3 +182,21 @@ let swiperPortfolio = new Swiper(".services-box-services", {
     },
   },
 });
+
+// Function to adjust Swiper for mobile
+function updateSwiperForMobile() {
+  const isMobile = window.matchMedia("(max-width: 500px)").matches;
+
+  if (isMobile) {
+    swiperPortfolio.params.slidesPerView = 1; // Only 1 slide for mobile
+    swiperPortfolio.params.spaceBetween = 10; // Adjust spacing for mobile
+  } else {
+    swiperPortfolio.params.slidesPerView = "auto"; // Restore to default for desktop
+    swiperPortfolio.params.spaceBetween = 10; // Restore default spacing
+  }
+  swiperPortfolio.update(); // Apply the changes
+}
+
+// Call function on load and resize
+updateSwiperForMobile();
+window.addEventListener("resize", updateSwiperForMobile);

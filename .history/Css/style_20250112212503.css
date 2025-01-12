@@ -943,95 +943,76 @@ img {
 @media screen and (max-width: 500px) {
   .services-box-content {
     width: 350px;
+    margin: 0 auto; /* Pusatkan konten */
   }
 
   .swiper-container {
+    overflow: visible; /* Pastikan tombol terlihat */
     position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    padding: 0 20px; /* Beri ruang untuk tombol next dan prev */
+    gap: 20px; /* Jarak antar elemen */
   }
 
   .swiper-slide {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 100%;
-    flex-shrink: 0;
+    width: 100%; /* Slide mengisi seluruh lebar container */
+    max-width: 320px; /* Batas maksimum lebar slide */
+    height: auto;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
+    justify-content: center;
     align-items: center;
+    box-sizing: border-box;
   }
 
-  .swiper-slide-active {
-    opacity: 1;
-  }
-
-  /* Tombol Swiper */
+  /* Tombol navigasi */
   .swiper-button-prev,
   .swiper-button-next {
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    width: 40px;
-    height: 40px;
+    position: absolute;
+    top: 50%; /* Posisikan tombol di tengah vertikal */
+    transform: translateY(-50%); /* Tengahkan secara vertikal */
+    z-index: 10; /* Pastikan tombol berada di atas konten */
+    background-color: rgba(0, 0, 0, 0.5); /* Warna semi-transparan */
+    color: #fff; /* Warna ikon */
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    bottom: 100%;
-    transform: translateY(-50%);
   }
 
-  /* Tombol sebelumnya */
   .swiper-button-prev {
-    left: -5px;
+    left: -10px; /* Jarak tombol prev dari kontainer */
   }
 
-  /* Tombol berikutnya */
   .swiper-button-next {
-    right: -5px;
+    right: -10px; /* Jarak tombol next dari kontainer */
   }
 
-  /* Gambar */
   .portfolio-img {
-    max-width: 100%;
-    maxheighth:4000%;
+    max-width: 100%; /* Gambar mengisi slide */
     border-radius: 10px;
   }
 
-  /* Judul */
   .portfolio-title {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 5px;
   }
 
-  /* Deskripsi */
   .portfolio-description {
     font-size: 1rem;
     margin: 10px 0;
     text-align: center;
   }
 
-  /* Tombol di dalam slide */
   .portfolio-button {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-  }
-
-  .swiper-wrapper {
-    display: flex;
-    transition: transform 0.3s ease;
-    max-width: 305px;
-    max-height: 400px;
   }
 }
 
@@ -1274,34 +1255,23 @@ img {
   }
 
   .swiper-container {
-    overflow: hidden;
+    overflow: hidden; /* Menyembunyikan slide sebelum dan sesudah */
   }
 
   .swiper-slide {
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    opacity: 0; /* Sembunyikan semua slide secara default */
+    transition: opacity 0.3s ease; /* Menambahkan transisi untuk efek perubahan opacity */
   }
 
   .swiper-slide-active {
-    opacity: 1;
+    opacity: 1; /* Tampilkan slide yang aktif */
   }
 
   /* Tambahkan aturan ini untuk menampilkan slide jika hanya ada satu */
   .swiper-container:only-child .swiper-slide {
-    opacity: 1;
-  }
-  .swiper-wrapper {
-    display: flex;
-    transition: transform 0.3s ease;
-    max-width: 850px;
-    max-height: 600px;
-  }
-  .services-box-services {
-    display: grid; /* Atau flex, tergantung layout Anda */
-    gap: 1rem; /* Menambahkan gap di dalam elemen services-box-services */
+    opacity: 1; /* Tampilkan slide jika hanya ada satu */
   }
 }
-
 
 /*******************************/
 /********* Footer CSS **********/
@@ -1356,22 +1326,22 @@ img {
 }
 
 .footer-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
+  display: flex; /* Mengaktifkan flexbox */
+  justify-content: center; /* Menengahkan ikon secara horizontal */
+  align-items: center; /* Menyesuaikan vertikal */
+  gap: 15px; /* Jarak antar ikon */
+  margin-top: 20px; /* Memberi jarak dari elemen di atasnya */
 }
 
 .footer-social a {
   display: inline-block;
-  color: #ffffff;
-  font-size: 20px;
+  color: #ffffff; /* Warna ikon */
+  font-size: 20px; /* Ukuran ikon */
   transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
-  color: #414141;
+  color: #414141; /* Warna saat hover */
 }
 
 .footer .copyright {
