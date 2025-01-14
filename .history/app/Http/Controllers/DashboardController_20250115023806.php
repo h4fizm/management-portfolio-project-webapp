@@ -7,6 +7,7 @@ class DashboardController extends Controller
 {
     public function showMainPage()
     {
+        // Menampilkan view 'MainPage.blade.php'
         return view('menu.dashboard');
     }
 }

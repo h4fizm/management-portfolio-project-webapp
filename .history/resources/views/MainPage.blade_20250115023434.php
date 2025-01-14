@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>@yield('title')</title>
+    <title>Dashboard Page</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -56,6 +56,7 @@
 
             <!-- Main Content -->
              @yield('content')
+            
             <!-- End Main Content -->
 
             <!-- Footer Start -->

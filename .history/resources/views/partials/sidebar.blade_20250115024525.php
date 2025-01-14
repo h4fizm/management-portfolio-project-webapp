@@ -11,7 +11,7 @@
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Setting</a>
                 <div class="dropdown-menu bg-transparent border-0">
-                    <a href="signin.html" class="dropdown-item">Manage User</a>
+                    <a href="signin.html" class="dropdown-item">User Profile</a>
                     <a href="signup.html" class="dropdown-item">My Profile</a>
                 </div>
             </div>
