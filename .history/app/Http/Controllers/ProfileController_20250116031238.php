@@ -15,11 +15,9 @@ class ProfileController extends Controller
 
     public function showManageUserPage()
     {
-        // Urutkan data berdasarkan created_at atau updated_at, dan ambil 5 data per halaman
-        $users = User::orderBy('created_at', 'desc')->paginate(5); // Urutkan berdasarkan created_at (data terbaru di atas)
+        $users = User::paginate(5); // Mengambil 5 data per halaman
         return view('menu.manage-user', compact('users'));
     }
-
 
     /**
      * Menampilkan halaman edit profil pengguna.

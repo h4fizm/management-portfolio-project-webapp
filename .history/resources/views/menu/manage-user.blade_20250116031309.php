@@ -12,17 +12,17 @@
                         <th scope="col">No</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
-                        <th scope="col" class="text-center">Preview Resume</th>
+                        <th scope="col">Preview Resume</th>
                         <th scope="col" class="text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($users as $index => $user)
                     <tr>
-                        <th scope="row">{{ $users->firstItem() + $index }}</th> <!-- Menghitung dari item pertama di halaman ini -->
+                        <th scope="row">{{ $index + 1 }}</th>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td class="text-center">
+                        <td>
                             @if ($user->upload_resume)
                                 <!-- Pastikan bahwa file bisa diakses dengan link yang benar -->
                                 <a href="{{ asset('storage/resumes/' . $user->upload_resume) }}" target="_blank" class="btn btn-sm btn-primary">Preview Resume</a>
@@ -50,8 +50,8 @@
 
         <!-- Pagination -->
         <div class="d-flex justify-content-end mt-3">
-            {{ $users->links('pagination::bootstrap-4') }}
-        </div>
+    {{ $users->links('pagination::bootstrap-4') }}
+</div>
 
     </div>
   </div>

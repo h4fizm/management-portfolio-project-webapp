@@ -12,7 +12,7 @@
                         <th scope="col">No</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
-                        <th scope="col" class="text-center">Preview Resume</th>
+                        <th scope="col"class="text-center">Preview Resume</th>
                         <th scope="col" class="text-center">Action</th>
                     </tr>
                 </thead>
