@@ -1,0 +1,18 @@
+@extends('MainPage')
+@section('title', 'User Profile')
+@section('content')
+<div class="container-fluid pt-4 px-4">
+    <div class="col-sm-12 col-xl-6">
+        <div class="bg-light rounded h-100 p-4">
+            <h6 class="mb-4">User Profile</h6>
+            <div class="owl-carousel testimonial-carousel">
+                <div class="testimonial-item text-center">
+                    <img class="img-fluid rounded-circle mx-auto mb-4" src="{{ asset('DashPage/img/testimonial-1.jpg') }}" style="width: 100px; height: 100px;">
+                    <h5 class="mb-1">Name</h5>
+                    <p class="mb-0">Aku Manusia Super</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
