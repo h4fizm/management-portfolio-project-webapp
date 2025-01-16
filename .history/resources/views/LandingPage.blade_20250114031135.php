@@ -159,14 +159,23 @@
         </div>
       </section>
 
-      {{-- skill --}}
+      <!-- skills -->
       <section class="skills section" id="skills">
         <h2 class="section-title">Skills</h2>
         <span class="section-subtitle">My Technical Skills</span>
         <div class="skills-content container">
-          @foreach($skills as $skill)
-            <div class="skills-name">{{ $skill->skill_name }}</div>
-          @endforeach
+          <div class="skills-name">JavaScript</div>
+          <div class="skills-name">React JS</div>
+          <div class="skills-name">Tailwind CSS</div>
+          <div class="skills-name">Bootstrap</div>
+          <div class="skills-name">CSS</div>
+          <div class="skills-name">SASS</div>
+          <div class="skills-name">Figma</div>
+          <div class="skills-name">Node JS</div>
+          <div class="skills-name">Express JS</div>
+          <div class="skills-name">MongoDB</div>
+          <div class="skills-name">Photoshop</div>
+          <div class="skills-name">Python</div>
         </div>
       </section>
 

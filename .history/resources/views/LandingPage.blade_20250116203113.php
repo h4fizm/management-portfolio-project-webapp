@@ -159,7 +159,6 @@
         </div>
       </section>
 
-      {{-- skill --}}
       <section class="skills section" id="skills">
         <h2 class="section-title">Skills</h2>
         <span class="section-subtitle">My Technical Skills</span>

@@ -159,16 +159,15 @@
         </div>
       </section>
 
-      {{-- skill --}}
-      <section class="skills section" id="skills">
-        <h2 class="section-title">Skills</h2>
-        <span class="section-subtitle">My Technical Skills</span>
-        <div class="skills-content container">
-          @foreach($skills as $skill)
-            <div class="skills-name">{{ $skill->skill_name }}</div>
-          @endforeach
-        </div>
-      </section>
+     <section class="skills section" id="skills">
+  <h2 class="section-title">Skills</h2>
+  <span class="section-subtitle">My Technical Skills</span>
+  <div class="skills-content container">
+    @foreach($skills as $skill)
+      <div class="skills-name">{{ $skill->skill_name }}</div>
+    @endforeach
+  </div>
+</section>
 
       <!-- qualification -->
       <section class="qualification section">

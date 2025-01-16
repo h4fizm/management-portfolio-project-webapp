@@ -1,14 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\ProfileController;
 
-
-Route::get('/', [MainController::class, 'showLandingPage']);
+Route::get('/', function () {
+    return view('LandingPage');
+});
 
 Route::get('/login', [AuthController::class, 'showLoginPage'])->name('login.page');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
@@ -25,7 +25,6 @@ Route::middleware('auth')->group(function () {
     // Manage Skill Page
     Route::get('/manage-skill', [SkillController::class, 'showManageSkillPage'])->name('manage-skill');
     Route::post('/add-skill', [SkillController::class, 'storeSkill'])->name('add-skill');
-    Route::delete('/delete-skill/{id}', [SkillController::class, 'deleteSkill'])->name('delete-skill');
 
 
     // Profile Pages

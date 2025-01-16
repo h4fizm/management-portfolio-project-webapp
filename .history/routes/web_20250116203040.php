@@ -1,12 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\ProfileController;
 
+use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'showLandingPage']);
 
