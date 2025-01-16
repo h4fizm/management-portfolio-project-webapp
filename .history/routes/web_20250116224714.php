@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 
     // Manage Service Page
     Route::get('/manage-service', [ServiceController::class, 'showManageServicePage'])->name('manage-service');
-    Route::post('/add-service', [ServiceController::class, 'storeService'])->name('add-service');
+    Route::post('/add-skill', [SkillController::class, 'storeSkill'])->name('add-service');
     Route::delete('/delete-service/{id}', [ServiceController::class, 'deleteService'])->name('delete-service');
 
 

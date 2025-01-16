@@ -30,7 +30,7 @@ Route::middleware('auth')->group(function () {
 
     // Manage Service Page
     Route::get('/manage-service', [ServiceController::class, 'showManageServicePage'])->name('manage-service');
-    Route::post('/add-service', [ServiceController::class, 'storeService'])->name('add-service');
+    // Menghapus service berdasarkan ID
     Route::delete('/delete-service/{id}', [ServiceController::class, 'deleteService'])->name('delete-service');
 
 

@@ -335,140 +335,142 @@
       <section class="services section" id="projects">
         <h2 class="section-title">Project's</h2>
         <span class="section-subtitle">My Recent Project's</span>
-          <div class="services-container container grid">
-            {{-- Loop untuk menampilkan semua data service --}}
-            @foreach($services as $service)
-              <div class="services-content">
-                <div>
-                  <i class="fa-solid fa-code services-icon"></i>
-                  <h3 class="services-title">
-                    {{ $service->service_name }} <br />
-                  </h3>
-                </div>
-                <span class="button button-flex button-small button-link services-button">
-                  View more
-                  <i class="fa-solid fa-arrow-right button-icon"></i>
-                </span>
 
-                <div class="services-box">
-                  <div class="services-box-content">
-                    <h4 class="services-box-title">
-                      Frontend <br />
-                      Developer
-                    </h4>
-                    <i class="fa-solid fa-xmark services-box-close"></i>
-                    <ul class="services-box-services grid">
-                      <div class="swiper-wrapper">
-                        <!-- Project 1 -->
-                        <div class="portfolio-content grid swiper-slide">
-                          <img src="Assets/project1.svg" alt="" class="portfolio-img" />
-                          <div class="portfolio-data">
-                            <h3 class="portfolio-title">1.Business Websites</h3>
-                            <p class="portfolio-description">
-                              Dynamic business sites that reflect your brand and
-                              engage customers effectively.
-                            </p>
-                            <a
-                              href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
-                              target="_blank"
-                              class="button button-flex button-small portfolio-button">
-                              Project Link
-                              <i class="fa-solid fa-arrow-right button-icon"></i>
-                            </a>
-                          </div>
-                        </div>
+        <div class="services-container container grid">
+          {{-- Loop untuk menampilkan semua data service --}}
+          @foreach($services as $service)
+            <div class="services-content">
+              <div>
+                <i class="fa-solid fa-code services-icon"></i>
+                <h3 class="services-title">
+                  {{ $service->service_name }} <br />
+                </h3>
+              </div>
+              <span class="button button-flex button-small button-link services-button">
+                View more
+                <i class="fa-solid fa-arrow-right button-icon"></i>
+              </span>
 
-                        <!-- Project 2 -->
-                        <div class="portfolio-content grid swiper-slide">
-                          <img src="Assets/project1.svg" alt="" class="portfolio-img" />
-                          <div class="portfolio-data">
-                            <h3 class="portfolio-title">2.Business Websites</h3>
-                            <p class="portfolio-description">
-                              Dynamic business sites that reflect your brand and
-                              engage customers effectively.
-                            </p>
-                            <a
-                              href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
-                              target="_blank"
-                              class="button button-flex button-small portfolio-button">
-                              Project Link
-                              <i class="fa-solid fa-arrow-right button-icon"></i>
-                            </a>
-                          </div>
-                        </div>
-
-                        <!-- Project 3 -->
-                        <div class="portfolio-content grid swiper-slide">
-                          <img src="Assets/project1.svg" alt="" class="portfolio-img" />
-                          <div class="portfolio-data">
-                            <h3 class="portfolio-title">3.Business Websites</h3>
-                            <p class="portfolio-description">
-                              Dynamic business sites that reflect your brand and
-                              engage customers effectively.
-                            </p>
-                            <a
-                              href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
-                              target="_blank"
-                              class="button button-flex button-small portfolio-button">
-                              Project Link
-                              <i class="fa-solid fa-arrow-right button-icon"></i>
-                            </a>
-                          </div>
-                        </div>
-
-                        <!-- Project 4 -->
-                        <div class="portfolio-content grid swiper-slide">
-                          <img src="Assets/project1.svg" alt="" class="portfolio-img" />
-                          <div class="portfolio-data">
-                            <h3 class="portfolio-title">4.Business Websites</h3>
-                            <p class="portfolio-description">
-                              Dynamic business sites that reflect your brand and
-                              engage customers effectively.
-                            </p>
-                            <a
-                              href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
-                              target="_blank"
-                              class="button button-flex button-small portfolio-button">
-                              Project Link
-                              <i class="fa-solid fa-arrow-right button-icon"></i>
-                            </a>
-                          </div>
-                        </div>
-
-                        <!-- Project 5 -->
-                        <div class="portfolio-content grid swiper-slide">
-                          <img src="Assets/project1.svg" alt="" class="portfolio-img" />
-                          <div class="portfolio-data">
-                            <h3 class="portfolio-title">5.Business Websites</h3>
-                            <p class="portfolio-description">
-                              Dynamic business sites that reflect your brand and
-                              engage customers effectively.
-                            </p>
-                            <a
-                              href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
-                              target="_blank"
-                              class="button button-flex button-small portfolio-button">
-                              Project Link
-                              <i class="fa-solid fa-arrow-right button-icon"></i>
-                            </a>
-                          </div>
+              <div class="services-box">
+                <div class="services-box-content">
+                  <h4 class="services-box-title">
+                    Frontend <br />
+                    Developer
+                  </h4>
+                  <i class="fa-solid fa-xmark services-box-close"></i>
+                  <ul class="services-box-services grid">
+                    <div class="swiper-wrapper">
+                      <!-- Project 1 -->
+                      <div class="portfolio-content grid swiper-slide">
+                        <img src="Assets/project1.svg" alt="" class="portfolio-img" />
+                        <div class="portfolio-data">
+                          <h3 class="portfolio-title">1.Business Websites</h3>
+                          <p class="portfolio-description">
+                            Dynamic business sites that reflect your brand and
+                            engage customers effectively.
+                          </p>
+                          <a
+                            href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
+                            target="_blank"
+                            class="button button-flex button-small portfolio-button">
+                            Project Link
+                            <i class="fa-solid fa-arrow-right button-icon"></i>
+                          </a>
                         </div>
                       </div>
 
-                      <div class="swiper-angles">
-                        <div class="swiper-button-next">
-                          <i class="fa-solid fa-angle-right swiper-icon"></i>
-                        </div>
-                        <div class="swiper-button-prev">
-                          <i class="fa-solid fa-angle-left swiper-icon"></i>
+                      <!-- Project 2 -->
+                      <div class="portfolio-content grid swiper-slide">
+                        <img src="Assets/project1.svg" alt="" class="portfolio-img" />
+                        <div class="portfolio-data">
+                          <h3 class="portfolio-title">2.Business Websites</h3>
+                          <p class="portfolio-description">
+                            Dynamic business sites that reflect your brand and
+                            engage customers effectively.
+                          </p>
+                          <a
+                            href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
+                            target="_blank"
+                            class="button button-flex button-small portfolio-button">
+                            Project Link
+                            <i class="fa-solid fa-arrow-right button-icon"></i>
+                          </a>
                         </div>
                       </div>
-                    </ul>
-                  </div>
+
+                      <!-- Project 3 -->
+                      <div class="portfolio-content grid swiper-slide">
+                        <img src="Assets/project1.svg" alt="" class="portfolio-img" />
+                        <div class="portfolio-data">
+                          <h3 class="portfolio-title">3.Business Websites</h3>
+                          <p class="portfolio-description">
+                            Dynamic business sites that reflect your brand and
+                            engage customers effectively.
+                          </p>
+                          <a
+                            href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
+                            target="_blank"
+                            class="button button-flex button-small portfolio-button">
+                            Project Link
+                            <i class="fa-solid fa-arrow-right button-icon"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                      <!-- Project 4 -->
+                      <div class="portfolio-content grid swiper-slide">
+                        <img src="Assets/project1.svg" alt="" class="portfolio-img" />
+                        <div class="portfolio-data">
+                          <h3 class="portfolio-title">4.Business Websites</h3>
+                          <p class="portfolio-description">
+                            Dynamic business sites that reflect your brand and
+                            engage customers effectively.
+                          </p>
+                          <a
+                            href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
+                            target="_blank"
+                            class="button button-flex button-small portfolio-button">
+                            Project Link
+                            <i class="fa-solid fa-arrow-right button-icon"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                      <!-- Project 5 -->
+                      <div class="portfolio-content grid swiper-slide">
+                        <img src="Assets/project1.svg" alt="" class="portfolio-img" />
+                        <div class="portfolio-data">
+                          <h3 class="portfolio-title">5.Business Websites</h3>
+                          <p class="portfolio-description">
+                            Dynamic business sites that reflect your brand and
+                            engage customers effectively.
+                          </p>
+                          <a
+                            href="https://github.com/harisahmad59/CodeHype-Responsive-Website"
+                            target="_blank"
+                            class="button button-flex button-small portfolio-button">
+                            Project Link
+                            <i class="fa-solid fa-arrow-right button-icon"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-angles">
+                      <div class="swiper-button-next">
+                        <i class="fa-solid fa-angle-right swiper-icon"></i>
+                      </div>
+                      <div class="swiper-button-prev">
+                        <i class="fa-solid fa-angle-left swiper-icon"></i>
+                      </div>
+                    </div>
+                  </ul>
                 </div>
               </div>
-            @endforeach
-          </div>
+            </div>
+          @endforeach
+        </div>
+
       </section>
 
 

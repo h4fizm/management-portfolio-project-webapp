@@ -5,7 +5,6 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SkillController;
-use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ProfileController;
 
 
@@ -29,10 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/delete-skill/{id}', [SkillController::class, 'deleteSkill'])->name('delete-skill');
 
     // Manage Service Page
-    Route::get('/manage-service', [ServiceController::class, 'showManageServicePage'])->name('manage-service');
-    Route::post('/add-service', [ServiceController::class, 'storeService'])->name('add-service');
-    Route::delete('/delete-service/{id}', [ServiceController::class, 'deleteService'])->name('delete-service');
-
+    Route::get('/manage-skill', [ServiceController::class, 'showManageServicePage'])->name('manage-service');
 
     // Profile Pages
     Route::get('/profile/{id?}', [ProfileController::class, 'showProfilePage'])->name('profile.page');

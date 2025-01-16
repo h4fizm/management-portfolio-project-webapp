@@ -1,45 +1,45 @@
 @extends('MainPage')
-@section('title', 'Manage Skill')
+@section('title', 'Manage Service')
 @section('content')
 <div class="container-fluid pt-4 px-4">
   <div class="col-12">
     <div class="bg-light rounded h-100 p-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h6>List All Skill's</h6>
-            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addSkillModal">+ Add Skill</button>
+            <h6>List All Service's</h6>
+            <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#addSkillModal">+ Add service</button>
         </div>
         <div class="table-responsive">
             <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Skill Name</th>
+                        <th scope="col">Service Name</th>
                         <th scope="col" class="text-center">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($skills as $key => $skill)
-                        <tr>
-                            <td>{{ $skills->firstItem() + $key }}</td>
-                            <td>{{ $skill->skill_name }}</td>
-                            <td class="text-center">
-                                <div class="d-flex justify-content-center gap-2">
-                                    <form id="delete-form-{{ $skill->id }}" action="{{ route('delete-skill', $skill->id) }}" method="POST" style="display: none;">
-                                        @csrf
-                                        @method('DELETE')
-                                    </form>
-                                    <button class="btn btn-danger btn-sm" onclick="confirmDelete({{ $skill->id }})">Delete</button>
-                                </div>
-                            </td>
-                        </tr>
-                    @endforeach
+                  {{-- Tampilkan isi datanya disini --}}
+                  @foreach($services as $service)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $service->service_name }}</td>
+                        <td class="text-center">
+                            <!-- Tombol delete dengan form -->
+                            <form action="{{ route('delete-service', $service->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this service?')">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                  @endforeach
                 </tbody>
             </table>
         </div>
 
         <!-- Pagination -->
         <div class="d-flex justify-content-end mt-3">
-            {{ $skills->links('pagination::bootstrap-4') }}
+            {{ $services->links('pagination::bootstrap-4') }}
         </div>
     </div>
   </div>
@@ -72,7 +72,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     // Fungsi konfirmasi penghapusan
-    function confirmDelete(skillId) {
+    function confirmDelete(serviceId) {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -84,7 +84,7 @@
             cancelButtonText: 'Cancel'
         }).then((result) => {
             if (result.isConfirmed) {
-                document.getElementById('delete-form-' + skillId).submit();
+                document.getElementById('delete-form-' + serviceId).submit();
             }
         });
     }
@@ -94,7 +94,7 @@
         Swal.fire({
             icon: 'success',
             title: 'Success',
-            text: '{{ session('success') }}',
+            text: '{{ session('success') }}',  // Fix: session message
             timer: 3000,
             showConfirmButton: false
         });

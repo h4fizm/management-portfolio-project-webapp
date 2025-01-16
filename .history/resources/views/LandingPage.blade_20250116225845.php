@@ -335,6 +335,7 @@
       <section class="services section" id="projects">
         <h2 class="section-title">Project's</h2>
         <span class="section-subtitle">My Recent Project's</span>
+
           <div class="services-container container grid">
             {{-- Loop untuk menampilkan semua data service --}}
             @foreach($services as $service)
@@ -469,6 +470,7 @@
               </div>
             @endforeach
           </div>
+
       </section>
 
 

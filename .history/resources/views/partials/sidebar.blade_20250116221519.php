@@ -12,10 +12,10 @@
                     <a href="{{ route('dashboard') }}" class="nav-item nav-link @if(Route::currentRouteName() == 'dashboard') active @endif">
                         <i class="fa fa-tachometer-alt me-2"></i>Dashboard
                     </a>
-                    <a href="{{ route('manage-skill') }}" class="nav-item nav-link @if(Route::currentRouteName() == 'manage-skill') active @endif">
+                    <a href="{{ route('manage-skill') }}" class="nav-item nav-link @if(Route::currentRouteName() == 'manage-skill.page') active @endif">
                         <i class="fa fa-th me-2"></i>Manage Skill's
                     </a>
-                    <a href="{{ route('manage-service') }}" class="nav-item nav-link @if(Route::currentRouteName() == 'manage-service') active @endif">
+                    <a href="" class="nav-item nav-link">
                         <i class="fa fa-keyboard me-2"></i>Manage Service's
                     </a>
                     <a href="" class="nav-item nav-link">
@@ -26,8 +26,8 @@
                             <i class="far fa-user me-2"></i>Setting
                         </a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="{{ route('manage-user') }}" class="dropdown-item @if(Route::currentRouteName() == 'manage-user') active @endif">Manage User</a>
-                            <a href="{{ route('profile.page', ['id' => Auth::id()]) }}" class="dropdown-item @if(Route::currentRouteName() == 'profile') active @endif">My Profile</a>
+                            <a href="{{ route('manage-user') }}" class="dropdown-item @if(Route::currentRouteName() == 'manage-user.page') active @endif">Manage User</a>
+                            <a href="{{ route('profile.page', ['id' => Auth::id()]) }}" class="dropdown-item @if(Route::currentRouteName() == 'profile.page') active @endif">My Profile</a>
                         </div>
                     </div>
                 </div>

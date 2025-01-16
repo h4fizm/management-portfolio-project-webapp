@@ -69,6 +69,31 @@
   </div>
 </div>
 
+<!-- Modal Edit Skill -->
+<div class="modal fade" id="editSkillModal" tabindex="-1" aria-labelledby="editSkillModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editSkillModalLabel">Edit Skill</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="editSkillForm" action="" method="POST">
+            @csrf
+            @method('PUT')
+            <div class="mb-3">
+                <label for="editSkillName" class="form-label">Skill Name</label>
+                <input type="text" class="form-control" id="editSkillName" name="skill_name" placeholder="Enter skill name" required>
+            </div>
+            <div class="text-end">
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     // Fungsi konfirmasi penghapusan

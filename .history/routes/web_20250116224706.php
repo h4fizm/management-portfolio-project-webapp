@@ -27,10 +27,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/manage-skill', [SkillController::class, 'showManageSkillPage'])->name('manage-skill');
     Route::post('/add-skill', [SkillController::class, 'storeSkill'])->name('add-skill');
     Route::delete('/delete-skill/{id}', [SkillController::class, 'deleteSkill'])->name('delete-skill');
-
+    
     // Manage Service Page
     Route::get('/manage-service', [ServiceController::class, 'showManageServicePage'])->name('manage-service');
-    Route::post('/add-service', [ServiceController::class, 'storeService'])->name('add-service');
+    Route::post('/add-skill', [SkillController::class, 'storeSkill'])->name('add-skill');
+    // Menghapus service berdasarkan ID
     Route::delete('/delete-service/{id}', [ServiceController::class, 'deleteService'])->name('delete-service');
 
 
