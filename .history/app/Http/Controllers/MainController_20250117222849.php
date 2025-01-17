@@ -1,4 +1,3 @@
-<?php
 namespace App\Http\Controllers;
 
 use App\Models\User;
@@ -14,7 +13,7 @@ class MainController extends Controller
         // Ambil semua skill, service, dan proyek terkait dengan setiap service
         $skills = Skill::all();
         $services = Service::with('projects')->get();  // Mengambil proyek terkait dengan setiap service
-
+        
         // Ambil resume terbaru berdasarkan created_at atau updated_at yang terbaru
         $latestResume = User::orderByRaw('GREATEST(updated_at, created_at) DESC')->first();
 

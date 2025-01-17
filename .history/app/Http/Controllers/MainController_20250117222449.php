@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Skill;
 use App\Models\Service;
-use App\Models\Project;
+use App\Models\Project;  // Tambahkan model Project
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -14,11 +14,13 @@ class MainController extends Controller
         // Ambil semua skill, service, dan proyek terkait dengan setiap service
         $skills = Skill::all();
         $services = Service::with('projects')->get();  // Mengambil proyek terkait dengan setiap service
-
-        // Ambil resume terbaru berdasarkan created_at atau updated_at yang terbaru
-        $latestResume = User::orderByRaw('GREATEST(updated_at, created_at) DESC')->first();
+        // Ambil resume terbaru
+        $latestResume = User::latest()->first();  // Mengambil data resume terbaru berdasarkan created_at atau updated_at
+        // Debugging untuk memastikan nilai upload_resume
+        dd($latestResume);
 
         // Kirim data ke view
         return view('LandingPage', compact('skills', 'services', 'latestResume'));
     }
+
 }

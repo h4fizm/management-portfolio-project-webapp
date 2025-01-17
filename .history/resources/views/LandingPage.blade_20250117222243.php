@@ -146,13 +146,14 @@
 
             <div class="about-buttons">
               <!-- Cek apakah ada resume terbaru -->
-              @if($latestResume && $latestResume->upload_resume)
-                <a download href="{{ asset('storage/resumes/' . $latestResume->upload_resume) }}" class="button button-flex">
-                    Download Resume<i class="fa-solid fa-file-arrow-down button-icon"></i>
-                </a>
-              @else
-                  <p>No resume available to download.</p>
-              @endif
+            @if($latestResume && $latestResume->upload_resume)
+    <a download href="{{ asset('storage/resumes/' . $latestResume->upload_resume) }}" class="button button-flex">
+        Download Resume<i class="fa-solid fa-file-arrow-down button-icon"></i>
+    </a>
+@else
+    <p>No resume available to download.</p>
+@endif
+
             </div>
           </div>
         </div>

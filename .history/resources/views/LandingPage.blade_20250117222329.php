@@ -153,6 +153,7 @@
               @else
                   <p>No resume available to download.</p>
               @endif
+
             </div>
           </div>
         </div>
